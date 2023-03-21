@@ -1,0 +1,207 @@
+@import '../../scss/mixins';
+@import '../../components/GlobalStyle/GlobalStyle.scss';
+
+.wrapper {
+
+}
+
+.image-container {
+  
+}
+
+.image {
+    @include media-breakpoint-md() {
+        width: 28vw;
+    }
+    width: 180px;
+    object-fit: cover;
+}
+
+.wrapper .image-limit {
+    width: 140px;
+
+    @include media-breakpoint-lg() {
+        width: 20vw;
+    }
+}
+
+.left-content {
+    display: flex;
+}
+
+.info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.info h3 {
+    font-size: 1.6rem;
+    @include media-breakpoint-sm() {
+        font-size: 3.2vw;
+    }
+}
+
+.info > div {
+    @include media-breakpoint-md() {
+        margin: 5px 0;
+    }
+
+    @include media-breakpoint-sm() {
+        margin: 2px 0;
+    }
+}
+
+.name {
+    font-weight: 700;
+    font-size: 2.1rem;
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include media-breakpoint-md() {
+        font-size: 3.5vw;
+    }
+}
+
+.name-limit {
+    font-size: 1.6rem;
+    white-space: normal;
+    @include media-breakpoint-md() {
+        font-size: 2.5vw;
+    }
+}
+
+.price {
+    font-size: 1.6rem;
+    color: #808080;
+    @include media-breakpoint-md() {
+        font-size: 2.7vw;
+    }
+
+    @include media-breakpoint-sm() {
+        font-size: 3vw;
+    }
+}
+
+.price-limit {
+    @include media-breakpoint-md() {
+        font-size: 2.2vw;
+    }
+}
+
+.wrapper .select {
+    max-width: 120px;
+    height: 36px;
+    @include media-breakpoint-sm() {
+        max-width: 90px;
+        height: 32px;
+    }
+}
+
+
+.item-1 {
+    @include media-breakpoint-md() {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+}
+
+.price-item-1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: $primary-color;
+}
+
+.price-item-1, .status {
+    text-align: right;
+    @include media-breakpoint-md() {
+        font-size: 3.8vw;
+    }
+}
+
+.status {
+    color: $primary-color;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-top: 10px;
+    @include media-breakpoint-md() {
+        margin-top: 0px;
+        //font-size: 2.3rem;
+        font-size: 3.8vw;
+        font-style: normal;
+    }
+}
+
+.item-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 22px;
+    @include media-breakpoint-md() {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+.wrapper .button {
+    display: block;
+    height: 40px;
+    width: 125px;
+    @include media-breakpoint-md() {
+        padding: 0px;
+        height: 31px;
+        width: 75px;
+    }
+}
+
+.wrapper  .card-store-select {
+    padding-right: 10px;
+}
+
+.button + .button {
+    margin-top: 10px;
+    @include media-breakpoint-md() {
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+}
+
+.wrapper .button-cart {
+    border: 1px solid #000;
+    background-color: transparent;
+    color: #000;
+}
+
+.wrapper  .active {
+    color: $primary-color;
+}
+
+.wrapper .btn-favorite {
+    font-size: 3.2rem;
+    color: $primary-color;
+  
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include media-breakpoint-lg() {
+        font-size: 2.6rem;
+    }
+}
+
+.wrapper .button-delete {
+    background-color: #000;
+}
+
+.wrapper .icon {
+    font-size: 2.6rem;
+}
+

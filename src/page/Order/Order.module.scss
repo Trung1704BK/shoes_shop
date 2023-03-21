@@ -1,0 +1,252 @@
+
+@import '../../components/GlobalStyle/GlobalStyle.scss';
+@import '../../scss/mixins';
+
+.wrapper {
+    max-width: 1200px;
+}
+
+.wrapper .content {
+    margin-top: 30px;
+}
+
+
+.wrapper .left-content {
+    padding-right: 40px;
+    
+    @include media-breakpoint-lg() {
+        padding-right: 0px;
+    }
+}
+
+.order-title-1 {
+    display: flex;
+    align-items: center;
+    color: #000;
+    background-color: #f1f1f1;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    height: 40px;
+    padding: 0 5px;
+    
+    @include media-breakpoint-md() {
+        font-size: 1.8rem;
+    }
+}
+
+//Checkbox
+
+.wrapper .checkbox-item {
+    margin: 25px 0px;
+    padding-left: 10px ;
+ 
+    @include media-breakpoint-lg() {
+        padding-right: 10px;
+    }
+}
+
+.wrapper .checkbox-title-1 {
+    font-size: 1.6rem;
+    font-weight: 700;   
+    text-align: right;  
+    
+    @include media-breakpoint-sm() {
+        margin-top: 0px;
+    } 
+}
+
+form .checkbox-item {
+       &:nth-last-child(1) {
+        margin-bottom: 45px;
+    }
+
+    @include media-breakpoint-sm() {
+        &:nth-last-child(1) {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.checkbox-title-2 {
+    text-align: right;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+//Form group
+
+.wrapper .form {
+    padding: 0 10px;
+    margin: 40px 0 10px 0;
+}
+
+.wrapper .form-group {
+    position: relative;
+    height: 34px;
+    margin-bottom: 30px;
+}
+
+.form-group input, .form-group select {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    outline: transparent;
+    font-size: 1.6rem;
+    padding: 0 10px;
+    border: 1px solid #dcdcdc;
+    box-shadow: inset 0 0 1px rgba(120, 120, 120, 0.2);
+    transition: border-color .2s ease;
+
+    &:focus {
+        border-color: #62c3ea;
+    }
+
+    &:focus ~ .title-warning {
+        opacity: 0;
+    }
+}
+
+.form-group .input-warning {
+    border-color: #f15e2c;
+  
+}
+
+.form-group .title-warning {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #f15e2c;
+}
+
+//Select
+
+.form-group select {
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    outline: none;
+}
+
+.select-flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+}
+
+.wrapper .flex-item {
+    flex: 1;
+    padding: 0 10px;
+}
+//Right content
+.wrapper .right-content {
+    padding: 0 10px;
+    @include media-breakpoint-lg() {
+        padding: 0;
+    }
+}
+
+.wrapper .list-group {
+    background-color: #f1f1f1;
+    padding: 0 20px;
+    @include media-breakpoint-lg() {
+        padding: 0 10px;
+    }
+}
+
+.right-tag-title {
+    font-size: 2.2rem;
+    padding: 10px 0px;
+    color: #000;
+    border-bottom: #000 2px solid;
+    margin: 0px 0px 20px 0px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.group-flex {
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.group-flex h3 {
+    &:nth-child(1) {
+        width: 60%;
+    }
+    &:nth-last-child(1) {
+        width: 40%;
+        text-align: right;
+    }
+}
+
+.product-item {
+    margin: 25px 0 15px 0;
+    &:nth-last-child(1) {
+        margin: 15px 0;
+    }
+}
+
+.product-item_name {
+    text-transform: capitalize;
+    line-height: 1.5;
+}
+
+.group-1 h3, .group-2 h3, .group-3 h3 {
+    color: #808080;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.wrapper .product-title-small {
+    font-weight: 400;
+}
+
+.line-dashed {
+    @include line-dashed;
+}
+
+//Total price
+
+.group-2, .group-3 {
+    margin: 25px 0;
+}
+
+.group-2 .group-2_black-title {
+    color: #000;
+}
+
+//Group 3
+
+.group-3 {
+    padding-bottom: 30px;
+}
+
+.group-3 .group-3-title {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.group-3  .group-3-title-primary{
+    color: $primary-color;
+    font-size: 2rem;
+}
+
+//Button
+.btn-order {
+    margin-top: 21px;
+    height: 80px;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+
+    @include media-breakpoint-sm() {
+        height: 60px;
+        font-size: 2.1rem;
+    }
+}

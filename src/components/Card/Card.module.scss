@@ -1,0 +1,149 @@
+@import '../../components/GlobalStyle/GlobalStyle.scss';
+@import '../../scss/mixins';
+
+$btn-container-height: 46px;
+.wrapper {
+    &:hover {
+        cursor: default;
+    }
+
+    &:hover .btn-buy {
+        opacity: 1;
+    }
+}
+
+.card-custom {
+    img:last-child {
+        display: none;
+    }
+    &:hover img:last-child {
+        display: block;
+    }
+    &:hover img:first-child {
+        display: none;
+    }
+}
+
+.card-image {
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    color: red;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn-container {
+    position: relative;
+    width: 100%;
+    height: $btn-container-height;
+    top: -46px;
+}
+
+.btn-container .btn-wrapper {
+    position: relative;
+}
+
+.wrapper .btn-buy {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    width: 144px;
+
+    @include media-breakpoint-md() {
+        display: none;
+    }
+}
+
+.wrapper .btn-favorite {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 80%;
+    font-size: 3.6rem;
+    color: $primary-color;
+  
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include media-breakpoint-lg() {
+        font-size: 3.2rem;
+    }
+
+    @include media-breakpoint-sm() {
+        left: 74%;
+    }
+}
+
+.wrapper  .active {
+    color: $primary-color;
+}
+
+//Description
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: calc(-1  * $btn-container-height);
+    white-space: normal;
+}
+
+.type {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    color: $primary-color;
+    font-weight: 400;
+    padding: 16px 0;
+    background-image: linear-gradient(to right, rgb(117, 117, 117) 33%, rgba(255, 0, 0, 0) 0%);
+    background-position: bottom;
+    background-size: 13px 1px;
+    background-repeat: repeat-x;
+}
+
+.name {
+    &:hover {
+        cursor: pointer;
+        color: $primary-color;
+    }
+}
+
+.name, .price {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.color {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.wrapper .des-item {
+    text-align: center;
+    padding: 2px 0;
+    text-transform: lowercase;
+}
+
+.wrapper .des-item {
+    text-transform: capitalize;
+}

@@ -1,0 +1,49 @@
+@import '../../components/GlobalStyle/GlobalStyle.scss';
+@import '../../scss/mixins';
+
+.wrapper {
+    max-width: 1200px;
+}
+
+.wrapper h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 700;
+
+    @include media-breakpoint-md() {
+        margin-top: 20px;
+    }
+}
+
+.black-line {
+    @include line-black-solid;
+    margin: 40px 0px;
+
+    @include media-breakpoint-md() {
+        margin: 20px 0px;
+    }
+}
+
+.product {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.card-item {
+    margin-bottom: 40px;
+    padding: 0 10px;
+    display: inline-block;
+    @include media-breakpoint-sm() {
+        margin-bottom: 20px;
+    }
+}
+
+
+.btn-show-more {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}

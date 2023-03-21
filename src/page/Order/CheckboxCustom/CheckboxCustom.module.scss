@@ -1,0 +1,67 @@
+@import '../../../components/GlobalStyle/GlobalStyle.scss';
+@import '../../../scss/mixins';
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-1 {
+    position: relative;
+}
+//input
+.order-ckb {
+   visibility: hidden;
+}
+//label for input
+.order-ckb-label {
+    //Checkbox custom
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 0;
+    top: 0;
+    border: 1px solid #000;
+    //Check icon
+    &::after {
+        position: absolute;
+        content: '';
+        left: 35%;
+        top: 16%;
+        transform: translate(-50%, -50%);
+        height: 12px;
+        width: 6px;
+        border: 2px solid #000;
+        transform: rotate(45deg);
+        border-left: transparent;
+        border-top: transparent;
+        opacity: 0;
+    }
+}
+// When click label -> click checkbox -> isChecked -> active to the order-ckb-label class
+.order-ckb:checked ~ .order-ckb-label {
+    &::after {
+        opacity: 1;
+    }
+}
+
+.checkbox-title-1 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    left: 70px;
+    margin-left: 50px;
+
+    @include media-breakpoint-sm() {
+        margin-left: 30px;
+    }
+}
+
+.checkbox-title-2 {
+    text-align: right;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.checkbox-img {
+    margin-left: 30px;
+}

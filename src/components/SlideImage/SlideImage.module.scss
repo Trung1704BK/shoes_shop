@@ -1,0 +1,80 @@
+@import '../../components/GlobalStyle/GlobalStyle.scss';
+@import '../../scss/mixins';
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.slide-container {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    max-width: 1920px;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    white-space: nowrap;
+    transition: ease 1000ms;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media-breakpoint-md() {
+        display: none;   
+    }
+}
+
+.slide-button {
+    width: 50px;
+    height: 5px;
+    border: transparent;
+    background-color: #e2e2e2;
+}
+
+.slide-button + .slide-button {
+    margin-left: 5px;
+}
+
+.active {
+    background-color: $primary-color;
+}
+
+//Btn slide
+.slide-btn {
+    position: absolute;
+    background-color:#e2e2e2;
+    top: 50%;
+    transform: translateY(-50%);
+    border: transparent;
+    border-radius: 50%;
+    height: 37px;
+    width: 37px;
+
+    @include media-breakpoint-md() {
+        height: 32px;
+        width: 32px;
+    }
+}
+.btn-pre {
+    left: 0;
+    margin-left: 20px;
+}
+
+.btn-next {
+    right: 0;
+    margin-right: 20px;
+}
+
+.slide-btn .arrow-icon {
+    font-size: 2.4rem;
+    @include media-breakpoint-md() {
+        font-size: 2rem;
+    }
+}

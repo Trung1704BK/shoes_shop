@@ -1,0 +1,78 @@
+@mixin media-breakpoint-xxl() { 
+    @media only screen and (max-width: 1399.98px) {
+        @content;
+    }
+ }
+
+ @mixin media-breakpoint-xl() { 
+    @media only screen and (max-width: 1199.98px) {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-lg() { 
+    @media only screen and (max-width: 991.98px) {
+        @content;
+    }
+ }
+
+
+ @mixin media-breakpoint-md() { 
+    @media only screen and (max-width: 767.98px) {
+        @content;
+    }
+}
+
+
+@mixin media-breakpoint-sm() { 
+    @media only screen and (max-width: 576px) { 
+        @content;
+     }
+}
+
+@mixin line-dahsed-custom {
+    background-image: linear-gradient(to right, rgb(117, 117, 117) 33%, rgba(255, 0, 0, 0) 0%);
+    background-position: bottom;
+    background-size: 16px 1.5px;
+    background-repeat: repeat-x;
+}
+
+@mixin arrow-rotate-180 {
+    -webkit-transition: .7s all;   
+    -webkit-transition-delay: .2s; 
+    -moz-transition: .7s all;   
+    -moz-transition-delay: .2s; 
+    -ms-transition: .7s all;   
+    -ms-transition-delay: .2s; 
+    -o-transition: .7s all;   
+    -o-transition-delay: .2s; 
+    transition: .7s all;   
+    transition-delay: .2s; 
+    transform: rotate(180deg);
+}
+//Line
+@mixin line-dashed {
+    background-color: #fff;
+    background: url(../asset/images/global/bg_divider.png) repeat-x 7px;
+    height: 2px;
+}
+
+@mixin line-black-solid {
+    border-bottom: #000 2px solid;
+    height: 1px;
+    margin: 40px 0px;
+}
+//Animation
+@mixin growDownAnimation {
+    // animation: growDown 500ms ease-in-out forwards;
+    // transform-origin: top;
+}
+
+@keyframes growDown {
+    // 0% {
+    //     transform: scaleY(0)
+    // }
+    // 100% {
+    //     transform: scaleY(1)
+    // }
+}

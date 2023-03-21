@@ -1,0 +1,264 @@
+@import '../../components/GlobalStyle/GlobalStyle.scss';
+@import '../../scss/mixins';
+
+$margin-padding-btn: 10px;
+
+#wrapper {
+    max-width: 1200px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin-top: 10px;
+}
+
+.detail-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    @include media-breakpoint-xl() {
+
+    }
+}
+//Wrapper image slide
+.wrapper-slide {
+    margin-right: 40px;
+    @include media-breakpoint-xl() {
+        // margin-right: 40px;
+    }
+
+    @include media-breakpoint-lg() {
+        margin-right: 0px;
+    }
+}
+
+//Wrapper image slide
+.wrapper-detail {
+
+}
+
+h1 h2 h3 h4 h5 h6 {
+    padding: 0;
+    margin: 0;
+}
+
+.title-header {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    line-height: 1.4em;
+    font-weight: 700;
+
+    @include media-breakpoint-md() {
+        font-size: 2.3rem;
+    }
+
+    @include media-breakpoint-sm() {
+        font-size: 2.1rem;
+    }
+}
+
+.code, .price  {
+    padding: 30px 0 0 0;
+}
+
+.code  {
+    display: flex;
+    justify-content: space-between;
+}
+
+.code span {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.price  {
+    color: $primary-color;
+    font-weight: 700;
+    font-size: 2.3rem;
+    padding-bottom: 30px;
+}
+
+.line-dashed {
+    margin: 15px 0px;
+    @include line-dashed;
+}
+
+.color {
+    height: 50px;
+}
+
+.color-item {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+    border: #e1e1e1 1px solid;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.color-item + .color-item {
+    margin-left: 15px;
+}
+
+.color-active {
+    &::after {
+        content: "";
+        font-size: 1.6rem;
+        position: absolute;
+        left: 35%;
+        top: 10%;
+        transform: translate(-50%, -50%);
+        font-weight: 700;
+        color: #fff;
+        height: 18px;
+        width: 9px;
+        transform: rotate(45deg);
+        border: 3px solid #fff;
+        border-top: transparent;
+        border-left: transparent;
+    }
+}
+
+.wrapper .info {
+    //margin:0 -$margin-padding-btn;
+    margin-left: -$margin-padding-btn;
+    margin-right: -$margin-padding-btn;
+}
+
+.wrapper .btn-block {
+    padding:0 $margin-padding-btn;
+}
+
+.btn-block h3 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin: 20px 0 10px 0;
+}
+
+//btn group 
+.wrapper .btn-container {
+    margin: 20px -5px 20px -5px;
+}
+
+.wrapper .btn-item {
+    padding: 0 5px;
+}
+
+.wrapper .btn-add {
+    text-transform: uppercase;
+    height: 70px;
+    font-size: 2.3rem;
+
+    @include media-breakpoint-lg() {
+        font-size: 2.1rem;
+    }
+
+    @include media-breakpoint-md() {
+        font-size: 2rem;
+    }
+}
+
+.btn-item .black {
+    background-color: #000;
+}
+
+.wrapper .btn-favorite {
+    font-size: 3.6rem;
+    color: $primary-color;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+//Panel
+.panel-container {
+
+}
+
+.panel-item {
+
+}
+
+.item-panel_header {
+    padding: 30px 0;
+}
+
+.panel-content {
+    padding: 20px 0;
+}
+
+.panel-content img {
+    width: 100%;
+}
+
+.wrapper .panel-content .hight-light {
+    text-transform: capitalize;
+}
+
+.wrapper .title {
+    font-size: 1.6rem;
+}
+
+.wrapper .slick {
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.wrapper .slick-item {
+    display: inline-block;
+    padding-left: 4px;
+    padding-right: 4px;
+
+    @include media-breakpoint-sm() {
+        margin-bottom: 20px;
+    }
+}
+
+.wrapper .image-item {
+    display: inline-block;
+
+}
+
+.wrapper .image-slide {
+    width: 100%;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.wrapper section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0px 40px 0;
+
+    @include media-breakpoint-md() {
+        padding: 26px 0;
+    }
+}
+
+.section-title h2 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+}
+
+.section-title h2 span {
+    font-size: 2.4rem;
+    background:#fff; 
+    padding:0 16px; 
+}
+
+.loading {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+

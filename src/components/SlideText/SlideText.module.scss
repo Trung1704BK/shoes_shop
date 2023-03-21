@@ -1,0 +1,63 @@
+@import '../../scss/mixins';
+.wrapper {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+
+    @include media-breakpoint-md () {
+        height: 40;
+    }
+    @include media-breakpoint-sm () {
+        height: 35px;
+    }
+}
+.wrapper .slick-arrow {
+    @include media-breakpoint-md () {
+        display: none;
+    }
+}
+
+.slick {
+    // max-width: 1920px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.slick-list {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 500;
+    color: #555;
+    white-space: nowrap;
+    transition: ease 1000ms,
+}
+
+.slick-arrow {
+    display: flex;
+    background-color: transparent;
+    border: transparent;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.slick span {
+    @include media-breakpoint-md () {
+        font-size: 1.4rem;
+    }
+    @include media-breakpoint-sm () {
+        font-size: 3.2vw;
+    }
+}
+
+.wrapper .slick-icon {
+    font-size: 2.6rem;
+    color: #888;
+}
+
+.slick-item {
+    display: inline-block; 
+    width: 100%;
+}

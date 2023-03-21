@@ -1,0 +1,62 @@
+@import '../../scss/mixins';
+@import '../../components/GlobalStyle/GlobalStyle.scss';
+
+.wrapper {
+
+}
+
+.panel-header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    -webkit-user-select: none; /* for Safari */
+    user-select: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.header-item + .header-item {
+    margin-left: 10px;
+}
+
+.wrapper .header-title, .wrapper .icon-arrow  {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    @include media-breakpoint-md() {
+        font-size: 2rem;
+    }
+    @include media-breakpoint-sm() {
+        font-size: 1.8rem;
+    }
+}
+
+.line {
+    @include line-dashed;
+}
+
+.panel-content {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.active {
+    transition: color .1s;
+    color: $primary-color;
+}
+
+.active-icon {
+    transition: .7s all;   
+    transform: rotate(180deg);
+    color: $primary-color;
+}
+
+.show {
+    // @include growDownAnimation;
+    display: block; 
+}

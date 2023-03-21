@@ -1,0 +1,70 @@
+@import '../../../../components/GlobalStyle/GlobalStyle.scss';
+@import '../../../../scss/mixins';
+$menu-height: 30px;
+$menu-height-mobile:80px;
+.wrapper {
+    display: none;
+}
+.menu {
+    display: flex; 
+    min-height: $menu-height;
+    background-color: #303030;
+    justify-content: end;
+    padding: 0 60px;
+
+    @include media-breakpoint-lg() {
+        flex-direction: column;
+        background-color: transparent;
+        padding: 0;
+    }
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin-left: 17px; 
+    @include media-breakpoint-lg() {
+        min-height: $menu-height-mobile;  
+        background-color: #4c4c4c;  
+    }
+}
+
+.icon + .link {
+    margin-left: 7px;
+} 
+
+.link {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+
+    @include media-breakpoint-lg() {
+        margin-left: 15px;
+        font-size: 2.4rem;
+        font-weight: 700;
+    }
+}
+
+.wrapper .icon {
+    font-size: 1.8rem;
+
+    @include media-breakpoint-lg() {
+        font-size: 3.2rem;
+    }
+}
+
+.menu-item, .icon, .link {
+    cursor: pointer;
+    color: #fff;
+   
+    &:hover .link {
+        color: #f15e2c;
+    }
+
+    @include media-breakpoint-lg() { 
+        &:hover .link {
+            color: #fff;
+        }
+    }
+}
+

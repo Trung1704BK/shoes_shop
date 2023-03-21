@@ -1,0 +1,25 @@
+@import '../../../scss/mixins';
+
+.header {
+    position: relative;
+}
+
+.navbar-container {
+    display: flex;
+}
+
+.header .header-menu {
+    display: block;
+    @include media-breakpoint-lg() {
+        display: none;
+    }
+}
+
+.slick-item {
+    display: inline-block; 
+    width: 100%;
+}
+
+.header .header-slick {
+    width: 774px;
+}

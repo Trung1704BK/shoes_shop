@@ -1,0 +1,21 @@
+@import '../../../../../components/GlobalStyle/GlobalStyle.scss';
+@import '../../../../../scss/mixins';
+
+.brand {
+    float: right;
+    @include media-breakpoint-sm() {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.logo {
+    float: right;
+    &:hover {
+        cursor: pointer;
+    }
+    @include media-breakpoint-md() {
+        width: 45%;
+    }
+}

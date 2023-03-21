@@ -1,0 +1,243 @@
+@import '../../../scss/mixins';
+@import '../../../components/GlobalStyle/GlobalStyle.scss';
+
+$footer-item-height: 80px;
+$font-size-icon: 2.2rem;
+
+.footer {
+    display: flex;
+    background-color: #4c4c4c;
+    padding: 60px 0px 60px 0px;
+    overflow: hidden;
+    @include media-breakpoint-lg() {
+        padding: 0;
+    }
+}
+//Search shop
+.search-shop {
+    text-align: center;
+    @include media-breakpoint-lg() {
+        display: none;
+    }
+}
+
+.btn-search-shop {
+    background-color: #f15e2c;
+    border: #f15e2c 1px solid;
+    color: #fff;
+    font-size: 2.3rem;
+    min-width: 279px;
+    height: 40px;
+    font-weight: 700;
+    &:hover {
+        cursor: pointer;
+    }
+    @include media-breakpoint-xl() {
+        min-width: 230px;
+    }
+}
+
+//Contact
+.footer-container {
+    display: flex;
+
+    @include media-breakpoint-lg() {
+        flex-direction: column;
+        &:nth-last-child(1), &:nth-last-child(2) {
+            padding: 0 3%;
+        }
+    }
+}
+
+.footer-container img {
+    @include media-breakpoint-lg() {
+        display: none;
+    }
+}
+
+.item-menu_mobile {
+    @include media-breakpoint-lg() {
+        display: flex;
+        justify-content: space-between;
+        min-height: $footer-item-height;
+        align-items: center;
+    }
+}
+
+.footer .icon-arrow {
+    display: none;
+    @include media-breakpoint-lg() {
+        display: block;
+        color: #fff;
+        font-size: $font-size-icon;
+    }
+}
+
+.rotate180 {
+    @include media-breakpoint-lg() {
+        @include arrow-rotate-180;
+    }
+}
+
+.footer-container:nth-last-child(2) {
+    margin-top: 25px;
+}
+
+.footer-container:nth-last-child(1) {
+    margin-top: 40px;
+    @include media-breakpoint-lg() {
+        margin-top: 0px;
+    }
+}
+
+.container-dashed-line {
+    @include media-breakpoint-lg() {
+        padding: 0 3%;
+        @include line-dahsed-custom;
+    }
+}
+
+.active .footer-list_header {
+    @include media-breakpoint-lg() {
+        transition: color .1s linear;
+        color: $primary-color;
+    }
+}
+
+.active .icon-arrow {
+    @include media-breakpoint-lg() {
+        color: $primary-color;
+        transition: all .7s;   
+        transform: rotate(180deg);
+    }
+}
+
+.list {
+    @include media-breakpoint-lg() {
+        padding: 10px 0px;
+    }
+}
+
+.hide {
+    @include media-breakpoint-lg() {
+        display: none;
+    }
+}
+
+.show {
+    @include media-breakpoint-lg() {
+        @include growDownAnimation;
+        display: block;
+        background-color: #303030;
+    }
+}
+
+.list-item {
+    @include media-breakpoint-lg() {
+        padding: 8px 0px 8px 40px; 
+    }
+}
+
+.footer-list_header {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    cursor: default;
+
+    @include media-breakpoint-lg() {
+        font-size: 2.4rem;
+        margin: 0;
+    }
+}
+
+.link {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #cccccc;
+    line-height: 1.7;
+    &:hover {
+        color: #f15e2c;
+    }
+
+    @include media-breakpoint-lg() {
+        line-height: 2;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
+
+//Social
+.social {
+    display: inline-block;
+}
+
+.social input {
+    @include media-breakpoint-lg() {
+        flex: 1;
+    }
+}
+
+.social + .social {
+    margin-left: 5px;
+}
+
+.footer-container .social-icon {
+    font-size: 4rem;
+    transition: all .3s;
+    &:hover {
+        color: #cccccc;
+        opacity: .7;
+    }
+}
+
+//Form group 
+.form-group {
+    display: flex;
+    height: 40px;
+}
+
+.form-group input {
+    height: 100%;
+    width: 170px;
+    padding: 0 10px;
+    font-size: 1.4rem;
+    color: #555;
+    &:focus {
+        outline: none;
+    }
+}
+
+.form-group button {
+    background-color: #000;
+    height: 100%;
+    width: 56px;
+    margin-left: 4px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.footer-container .form-icon {
+    color: #fff;
+    font-size: 2.6rem;
+}
+
+.license {
+    @include media-breakpoint-lg() {
+        text-align: center;
+        height: 50px;
+    }
+}
+
+.license span {
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #808080;
+    font-size: 1.8rem;
+}
+
+.item-mobile {
+    padding: 10px 0;
+}

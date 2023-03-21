@@ -1,0 +1,136 @@
+$menu-2_block-width: 260px;
+$menu-2_block-margin: 20px;
+
+.wrapper {
+    display: none;
+    width: 100vw;
+    min-height: 150px;
+    background-color: #555;
+    z-index: 1;
+    background: #4c4c4c;
+    text-align: center;   
+    cursor: auto; 
+    z-index: 999;
+}
+
+//Menu 1
+.menu-1 {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.menu-1_item {
+    display: inline-block;
+    width: 260px;
+    margin: 30px 20px 0px 20px;
+    vertical-align: top;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 60px;
+    opacity: .5;
+    transition: 0.7s;
+    &:hover {
+        color: #fff;
+        opacity: 1;
+    }
+}
+
+.menu-1_img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.menu-1_title {
+    display: block;
+    padding: 14px 0px 40px 0px;
+    font-size: 2.3rem;
+    font-weight: 700;
+    &:hover {
+        transition: none;
+        opacity: 1;
+        color: #f15e2c;
+    }
+    &:hover ~ .menu-1_img{
+        opacity: 1;
+    }
+}
+
+//Menu description 
+.menu_description {
+    margin-bottom: 40px;
+}
+
+.description {
+    background: transparent;
+    color: #808080;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.description span {
+    color: #fff;
+}
+
+.menu_description {
+
+}
+
+//Menu 2
+.menu-2 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(($menu-2_block-width * 3) + (($menu-2_block-margin * 2) * 3) + 50px);
+}
+
+.menu-2_block {
+    width: $menu-2_block-width;
+    margin: 30px $menu-2_block-margin 40px ;
+    text-align: left;
+}
+
+.menu-2_header {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    transition: color .2s;
+    &:hover {
+        cursor: pointer;
+        color: #f15e2c;
+    }
+}
+
+.list {
+    margin-bottom: 30px;
+}
+
+.title_header  {
+    font-weight: 600;
+    cursor: default;
+}
+
+.title {
+    display: block;
+    text-decoration: none;
+    font-weight: 400;
+    &:hover {
+        color: #f15e2c;
+    }
+
+    &:focus ~ .wrapper{
+        display: none;
+    }
+}
+
+.title_header, .title  {
+    font-size: 1.6rem;
+    color: #cccccc;
+    line-height: 1.6;
+   
+}

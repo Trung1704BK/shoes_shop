@@ -1,0 +1,28 @@
+@import '../../components/GlobalStyle/GlobalStyle.scss';
+@import '../../scss/mixins';
+
+.wrapper {
+    max-width: 1200px;
+    margin-top: 10px;
+}
+
+.wrapper .wishlist-breadcrumb {
+    @include media-breakpoint-lg() {
+        padding-left: 5px;
+    }
+}
+
+.wishlist-card {
+    @include media-breakpoint-lg() {
+        padding: 0 10px
+    }
+}
+
+.black-line {
+    @include line-black-solid;
+}
+
+.wrapper .line {
+    @include line-dashed;
+    margin: 20px 0;
+}

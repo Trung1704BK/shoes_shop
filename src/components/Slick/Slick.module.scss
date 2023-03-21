@@ -1,0 +1,42 @@
+
+.wrapper {
+
+}
+
+.slick-slide {
+    position: relative;
+    margin: 0 -1px;
+    overflow: hidden;
+}
+
+.wrapper .slick-list {
+    width: 12400px;
+    white-space: nowrap;
+    transition: ease 500ms,
+}
+
+.wrapper .btn-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    z-index: 10;
+    width: 48px; 
+}
+
+.btn-left {
+    left: 5px;
+}
+
+.btn-right {
+    right: 5px;
+}
+
+.wrapper .icon {
+    font-size: 4.8rem;
+    color: #6f6f6f;
+    &:hover {
+        color: #373737;
+    }
+}
